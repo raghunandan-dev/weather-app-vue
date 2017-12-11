@@ -47,6 +47,9 @@ export default new Vuex.Store({
     GET_WEATHER(state ,data){
       state.weatherData = data;
     },
+    SAVE_SELECTED_CITY(state, selectedCity){
+      state.selectedCity = selectedCity;
+    },
   },
   actions: {
     getCity({ commit }, city) {
@@ -73,6 +76,9 @@ export default new Vuex.Store({
     addTemp({ commit },data, selectedCity) {
       commit('SAVE_WEATHER', data, selectedCity);
     },
+    addCelectedCity({ commit }, selectedCity){
+      commit('SAVE_SELECTED_CITY', selectedCity)
+    }
   },
     getters: {
         newCity: state => state.newCity,

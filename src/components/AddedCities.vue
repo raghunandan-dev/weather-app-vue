@@ -4,7 +4,7 @@
 
         <ul class="list-group">
             <li class="list-group-item" v-for="city in cities">
-                {{city.body}}
+              
                 <router-link :to="{
      name: 'cities',
      params: {
